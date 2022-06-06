@@ -31,11 +31,11 @@ public class UserDAO {
         jdbcTemplate.update("INSERT INTO users VALUES (1, ?)", user.getName());
     }
 
-//    public void update(int id, User updatedPerson) {
-//        jdbcTemplate.update("UPDATE Person SET name=? WHERE id=?", updatedPerson.getName());
-//    }
-//
-//    public void delete(int id) {
-//        jdbcTemplate.update("DELETE FROM users WHERE id=?", id);
-//    }
+    public void update(int id, User updatedPerson) {
+        jdbcTemplate.update("UPDATE Person SET name=? WHERE id=?", updatedPerson.getName());
+    }
+
+    public void delete(int id) {
+        jdbcTemplate.update("DELETE FROM users WHERE id=?", id);
+    }
 }

@@ -44,25 +44,25 @@ public class UsersController {
         return "redirect:/users";
     }
 
-//    @DeleteMapping("/{id}")
-//    public String removeUser(@PathVariable("id") int id, Model model) {
-//        userDAO.delete(id);
-//        return "redirect:/users";
-//    }
-//
-//    @GetMapping("/{id}/update")
-//    public String edit(Model model, @PathVariable("id") int id) {
-//        model.addAttribute("person", userDAO.findById(id));
-//        return "user/update";
-//    }
-//
-//    @PatchMapping("/{id}")
-//    public String update(@ModelAttribute("user") @Valid User user, BindingResult bindingResult,
-//                         @PathVariable("id") int id) {
-//        if (bindingResult.hasErrors())
-//            return "user/update";
-//
-//        userDAO.update(id, user);
-//        return "redirect:/users";
-//    }
+    @DeleteMapping("/{id}")
+    public String removeUser(@PathVariable("id") int id, Model model) {
+        userDAO.delete(id);
+        return "redirect:/users";
+    }
+
+    @GetMapping("/{id}/update")
+    public String edit(Model model, @PathVariable("id") int id) {
+        model.addAttribute("person", userDAO.findById(id));
+        return "user/update";
+    }
+
+    @PatchMapping("/{id}")
+    public String update(@ModelAttribute("user") @Valid User user, BindingResult bindingResult,
+                         @PathVariable("id") int id) {
+        if (bindingResult.hasErrors())
+            return "user/update";
+
+        userDAO.update(id, user);
+        return "redirect:/users";
+    }
 }
