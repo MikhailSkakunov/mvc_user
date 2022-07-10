@@ -18,6 +18,7 @@
       <destination value="FILE" />
       <format value="EXCEL" />
       <charset value="windows-1251" />
+      <charset value="windows-1251" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -33,7 +34,7 @@
 create table person (
     id int auto_increment PRIMARY KEY,
     full_name varchar(100) UNIQUE NOT NULL,
-    year_of_birth int NOT NULL CHECK (person.year_of_birth > 1900)
+    year_of_birth int NOT NULL CHECK
 );
 
 CREATE TABLE book (
@@ -44,6 +45,8 @@ CREATE TABLE book (
     year INT NOT NULL,
     FOREIGN KEY (person_id) REFERENCES person (id) ON DELETE SET NULL
 );
+
+
 
 truncate table book;
 
@@ -79,9 +82,7 @@ SELECT * FROM book WHERE person_id=4;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="d4adae93-9db3-49a0-b763-79096b7eee3e" object-ref="consoles/Connection" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="d4adae93-9db3-49a0-b763-79096b7eee3e" />
@@ -172,7 +173,7 @@ SELECT * FROM book WHERE person_id=4;]]></console>
           <alternative-statement-delimiter value="" />
         </details>
         <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
-          <object-type-filter use-master-settings="true">
+          <object-type-filter>
             <object-type name="SCHEMA" enabled="true" />
             <object-type name="USER" enabled="true" />
             <object-type name="ROLE" enabled="true" />

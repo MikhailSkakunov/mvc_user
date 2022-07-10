@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adminPage.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/search.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/addBook.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/adminPage.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people" />

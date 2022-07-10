@@ -12,14 +12,21 @@
     <hr/>
 </div>
 
-<!--<div th:if="${!books.isEmpty()}">-->
-
+<div th:if="${!books.isEmpty()}">
+    </br>
     <b>Перечень книг: </b>
-
+    </br>
     <table th:each="book : ${books}">
-       <tr th:text="${book.getTitle() + ', ' + book.getAuthor() + ', ' + book.getYear()}">book</tr>
-    </table>
+       <tr>
+           <td>
+               <span
+               th:text="${book.getTitle() + ', ' + book.getAuthor() + ', ' + book.getYear()}"
+               th:style="${book.isLateBook()} ? 'color: red' : 'color: black'">book
+               </span>
+           </td>
+       </tr>
 
+    </table>
 </div>
 
 
